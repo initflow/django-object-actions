@@ -9,10 +9,12 @@
          {% for k, v in tool.custom_attrs.items %}
            {{ k }}="{{ v }}"
          {% endfor %}
-         class="{{ tool.standard_attrs.class }}">
+         class="{{ tool.standard_attrs.class }}"
+         onclick="this.style='pointer-events: none;cursor: default;'">
       {{ tool.label|capfirst }}
       </a>
     </li>
   {% endfor %}
   {{ block.super }}
 {% endblock %}
+
